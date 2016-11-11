@@ -88,6 +88,17 @@ Promises:
 */
 void UserAppInitialize(void)
 {
+   LedOff(WHITE);
+  LedOff(PURPLE);
+  LedOff(BLUE); 
+  LedOff(CYAN);
+  LedOff(GREEN);
+  LedOff(YELLOW);
+  LedOff(ORANGE);
+  LedOff(RED);
+  
+  
+  
   /* If good initialization, set state to Idle */
   if( 1 )
   {
@@ -98,7 +109,7 @@ void UserAppInitialize(void)
     /* The task isn't properly initialized, so shut it down and don't run */
     UserApp_StateMachine = UserAppSM_FailedInit;
   }
-
+      //here
 } /* end UserAppInitialize() */
 
   
@@ -136,7 +147,97 @@ State Machine Function Definitions
 /* Wait for a message to be queued */
 static void UserAppSM_Idle(void)
 {
+    //loop code
+  
+ 
+  
+  if( IsButtonPressed(BUTTON1))
+  {  LedOn(BLUE);
+  }
+  else
+  {  LedOff(BLUE);
+  }
+  
+  if( IsButtonPressed(BUTTON2))
+  {
+    LedOn(PURPLE);
+  }
+  else
+  {
+    LedOff(PURPLE);
+  }
+  
+  
+  //static LedRateType [] ={
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  //static bool bYellowBlink=TRUE;
+  //if( IsButtonPressed(BUTTON0))
+  //{
+   // LedOn(WHITE);
+  //}
+  //else
+  //{
+   // LedOff(WHITE);
+  //}
+  
+  //if (WasButtonPressed(BUTTON1))
+  //{
+   // ButtonAcknowledge(BUTTON1);
     
+    //if(bYellowBlink)
+    //{
+      //bYellowBlink=FALSE;
+      //LedOff(YELLOW);
+   // }
+    //else
+    //{
+      //bYellowBlink=TRUE;
+   //LedBlink(YELLOW,LED_1HZ);
+    //}
+  //}
+  
+  
+  //if(IsButtonHeld(BUTTON3,2000))
+  //{
+  //  LedOn(CYAN);
+  //}
+  //else
+  //{
+   // LedOff(CYAN);
+ // }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 } /* end UserAppSM_Idle() */
      
 #if 0
